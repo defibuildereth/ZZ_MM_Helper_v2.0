@@ -21,8 +21,9 @@ const createConfig = async function (allData) {
 
         let thresholdAmount = 400
         let stablecoinMultiplier = 10
-        let liquidity = 1
         let minAmount = 1
+
+        let liquidity = 1
         let trueStables = ['USDC', 'USDT', 'DAI', 'UST']
 
         let id2;
