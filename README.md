@@ -12,4 +12,4 @@ For each pair, we query cryptowatch for the available markets, and return the 1s
 
 4. node configGenerator.js
 
-Takes newMarkets.json and prints to console a pair config according to some user variables (set on lines 22-24 and 53). 
+Takes newMarkets.json and prints to console a pair config according to some user variables (set on lines 22-24 and 53). # ZZ_MM_Helper_v2.0
