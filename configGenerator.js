@@ -7,9 +7,9 @@ fs.readFile('newMarkets.json', (err, data) => {
     if (err) throw err;
     let allData = JSON.parse(data);
     createConfig(allData)
-    .then(() => {
-        // console.log(objects)
-    })
+        .then(() => {
+            // console.log(objects)
+        })
 })
 
 const createConfig = async function (allData) {
@@ -48,7 +48,7 @@ const createConfig = async function (allData) {
                     id2 = "constant:1"
                 }
             } else if (allData[i].info.id2) {
-                id2 = allData[i].info.id2
+                id2 = "cryptowatch:" + allData[i].info.id2
             } else {
                 id2 = null
                 liquidity = 2.5
@@ -58,7 +58,7 @@ const createConfig = async function (allData) {
                 [key]: {
                     "mode": "pricefeed",
                     "side": "d",
-                    "priceFeedPrimary": allData[i].info.id,
+                    "priceFeedPrimary": "cryptowatch:" + allData[i].info.id,
                     "priceFeedSecondary": id2,
                     "slippageRate": 2e-6 * unit * liquidity,
                     "maxSize": thresholdAmount / unit / liquidity,
