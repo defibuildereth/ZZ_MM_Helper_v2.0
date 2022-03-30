@@ -3,7 +3,7 @@ import fetch from 'node-fetch';
 
 let bestMarkets = []
 
-fs.readFile('allPairs.json', (err, data) => {
+fs.readFile('pairs.json', (err, data) => {
 
     let promiseArray = []
 

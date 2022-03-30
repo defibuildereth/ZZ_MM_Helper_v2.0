@@ -70,8 +70,8 @@ const createConfig = async function (allData) {
                     "changeSizeAfterFill": [-thresholdAmount / unit / liquidity / 3, 60 * liquidity, thresholdAmount / unit / 2.5]
                 }
             }
-            console.log(JSON.stringify(obj, null, 2))
-            objects.push(JSON.stringify(obj, null, 2))
+            console.log(JSON.stringify(obj, null, 2) + ",")
+            objects.push(JSON.stringify(obj, null, 2) + ",")
         }
     }
 }
